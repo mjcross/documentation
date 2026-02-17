@@ -115,9 +115,13 @@ The following table provides a comparison between RP2040 and RP2350 microcontrol
 |C/{cpp} SDK, MicroPython
 |===
 
+include::microcontroller-chips/rp2040.adoc[]
+
+include::microcontroller-chips/rp2350.adoc[]
+
 == USB identifiers
 
-Many RP2040 and RP2350 boards use a combination of Raspberry Pi USB identifiers (Vendor ID and Product ID). If you make your own, third-party board based on RP2040 or RP2350, you might need a unique USB Product ID (PID) if:
+Many RP2040 and RP2350 chips use a combination of Raspberry Pi USB identifiers (Vendor ID and Product ID). If you make your own, third-party board based on RP2040 or RP2350, you might need a unique USB Product ID (PID) if:
 
 * You need to provide a custom Windows driver.
 * You want your device to be uniquely identifiable as a separate product.
@@ -125,8 +129,4 @@ Many RP2040 and RP2350 boards use a combination of Raspberry Pi USB identifiers 
 Raspberry Pi has permission from USB-IF to licence USB PID values for its Vendor ID (`0x2E8A`) for common silicon components used with RP2040 and RP2350. This means that you can assign unique PIDs under our Vendor ID (`0x2E8A`). To reserve a USB PID associated with Raspberry Pi's Vendor ID, follow the instructions in the https://github.com/raspberrypi/usb-pid[Raspberry Pi USB PID Git repository].
 
 If you don't need a unique PID, you can still uniquely distinguish devices using any of the following USB text fields: `iManufacturer`, `iProduct`, and `iSerial`.
-
-include::microcontroller-chips/rp2040.adoc[]
-
-include::microcontroller-chips/rp2350.adoc[]
 
