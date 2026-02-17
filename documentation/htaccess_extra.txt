@@ -30,5 +30,9 @@ RedirectMatch 302 "^/documentation/microcontrollers/rp2040.html" "/documentation
 RedirectMatch 302 "^/documentation/microcontrollers/raspberry-pi-pico.html" "/documentation/microcontrollers/pico-series.html"
 RedirectMatch 302 "^/documentation/microcontrollers/pico.html" "/documentation/microcontrollers/pico-series.html"
 RedirectMatch 302 "^/documentation/accessories/usb-3-hub.html" "/documentation/accessories/usb.html"
+RedirectMatch 302 "^/documentation/microcontrollers/rp1.html" "/documentation/microcontrollers/microcontroller-chips.html"
+RedirectMatch 302 "^/documentation/microcontrollers/rp2040.html" "/documentation/microcontrollers/microcontroller-chips.html"
+RedirectMatch 302 "^/documentation/microcontrollers/rp2350.html" "/documentation/microcontrollers/microcontroller-chips.html"
+RedirectMatch 302 "^/documentation/microcontrollers/silicon.html" "/documentation/microcontrollers/microcontroller-chips.html"
 </IfModule>
 
