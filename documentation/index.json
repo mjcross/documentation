@@ -78,6 +78,12 @@
                     "subpath": "processors.adoc"
                 },
                 {
+                    "title": "I/O controllers",
+                    "description": "Technical information about Raspberry Pi I/O controllers",
+                    "image": "full-sized/RP1.png",
+                    "subpath": "io-controllers.adoc"
+                },
+                {
                     "title": "Software sources",
                     "description": "Open source software by Raspberry Pi",
                     "image": "full-sized/software-sources.png",
@@ -217,14 +223,20 @@
             "path": "microcontrollers",
             "subitems": [
                 {
-                    "title": "Silicon",
-                    "description": "Raspberry Pi in-house Silicon",
+                    "title": "Microcontroller chips",
+                    "description": "Raspberry Pi microcontroller chips, boards, and accessories",
                     "image": "full-sized/silicon.png",
-                    "subpath": "silicon.adoc"
+                    "subpath": "microcontroller-chips.adoc"
                 },
                 {
-                    "title": "Pico-series Microcontrollers",
-                    "description": "Support for Raspberry Pi Pico-series devices",
+                    "title": "Radio modules",
+                    "description": "Radio module accessories for Raspberry Pi microcontrollers",
+                    "image": "full-sized/radiomodule.png",
+                    "subpath": "radio-modules.adoc"
+                },
+                {
+                    "title": "Pico microcontroller boards",
+                    "description": "Raspberry Pi Pico-series devices",
                     "image": "full-sized/pico-series.png",
                     "subpath": "pico-series.adoc"
                 },
