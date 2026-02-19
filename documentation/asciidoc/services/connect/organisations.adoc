@@ -143,6 +143,7 @@ Replace these values in the code below:
 * `+rporg_accesstokenhere+`: your management API access token
 * `+my-auth-key+`: a description for your auth key
 * `+1+`: how many days until the auth key expires (optional, defaults to 1 day)
+* `+pi5-001+`: name used when adding devices with this key (optional, defaults to the device's hostname)
 
 [tabs]
 ======
@@ -155,7 +156,7 @@ Host: api.connect.raspberrypi.com
 Authorization: Bearer rporg_accesstokenhere
 Content-Type: application/x-www-form-urlencoded
 
-description=my-auth-key&ttl_days=1
+description=my-auth-key&ttl_days=1&device_name=pi5-001
 ----
 
 curl::
