@@ -13,9 +13,9 @@ Each generation is available in four variants, which differ based on:
 [[pico1]]
 == Raspberry Pi Pico
 
-The first generation of Raspberry Pi Pico is based on the xref:../microcontrollers/microcontroller-chips.adoc#rp2040[RP2040] microcontroller chip. It comes in four variants, listed in <<variants, Table 1>>. For more detail about the variants, see <<non-wireless_pico>> (Raspberry Pi *Pico* and *Pico H*) and <<wireless_pico>> (Raspberry Pi *Pico W* and Pico *WH*).
+The first generation of Raspberry Pi Pico is based on the xref:../microcontrollers/microcontroller-chips.adoc#rp2040[RP2040] microcontroller chip. It comes in four variants, listed in <<pico1-variants, Table 1>>. For more detail about the variants, see <<non-wireless_pico>> (Raspberry Pi *Pico* and *Pico H*) and <<wireless_pico>> (Raspberry Pi *Pico W* and Pico *WH*).
 
-[[variants]]
+[[pico1-variants]]
 .Raspberry Pi Pico variants
 [cols="2,1,1", options="header"]
 |===
@@ -101,7 +101,7 @@ Additionally, Raspberry Pi provides the following supporting hardware design res
 
 * https://datasheets.raspberrypi.com/pico/RPi-Pico-R3-PUBLIC-20200119.zip[Design files] (Cadence Allegro): PCB design files for studying or reproducing the board layout.
 * https://datasheets.raspberrypi.com/pico/Pico-R3-step.zip[STEP file]: a 3-dimensional CAD model of the board for enclosure and mechanical design.
-* http://fritizing.org[Fritzing] parts: components for use in Fritzing, an electronics design tool for layouts and schematics:
+* http://fritzing.org[Fritzing] parts: components for use in Fritzing, an electronics design tool for layouts and schematics:
     ** https://datasheets.raspberrypi.com/pico/Pico-R3-Fritzing.fzpz[Fritzing part for Raspberry Pi Pico]
     ** https://datasheets.raspberrypi.com/pico/PicoH-Fritzing.fzpz[Fritzing part for Raspberry Pi Pico H]
 
@@ -168,16 +168,16 @@ Additionally, Raspberry Pi provides the following supporting hardware design res
 
 * https://datasheets.raspberrypi.com/picow/RPi-PicoW-PUBLIC-20220607.zip[Design files] (Cadence Allegro): PCB design files for studying or reproducing the board layout.
 * https://datasheets.raspberrypi.com/picow/PicoW-step.zip[STEP file]: a 3-dimensional CAD model of the board for enclosure and mechanical design.
-* http://fritizing.org[Fritzing] part: component for use in Fritzing, an electronics design tool for layouts and schematics: https://datasheets.raspberrypi.com/picow/PicoW-Fritzing.fzpz[Fritzing part for Raspberry Pi Pico W].
+* http://fritzing.org[Fritzing] part: component for use in Fritzing, an electronics design tool for layouts and schematics: https://datasheets.raspberrypi.com/picow/PicoW-Fritzing.fzpz[Fritzing part for Raspberry Pi Pico W].
 
 IMPORTANT: Design files for Raspberry Pi Pico and Pico H are openly available with no limitations. Raspberry Pi grants permission to use, copy, modify, and distribute the following designs for any purpose, with or without fee. Designs are provided 'as-is' and the author disclaims all warranties with regard to the design, including all implied warranties of merchantability and fitness. In no event shall the author be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence, or other tortious action, arising out of or in connection with the use or performance of the design.
 
 [[pico2]]
 == Raspberry Pi Pico 2
 
-Raspberry Pi Pico 2 is based on the xref:../microcontrollers/microcontroller-chips.adoc#rp2350[RP2350] microcontroller chip. It comes in four variants, listed in <<variants, Table 2>>. Unlike Raspberry Pi *Pico H* and *Pico WH*, 'headers' isn't shortened to '*H*'.
+Raspberry Pi Pico 2 is based on the xref:../microcontrollers/microcontroller-chips.adoc#rp2350[RP2350] microcontroller chip. It comes in four variants, listed in <<pico2-variants, Table 2>>. Unlike Raspberry Pi *Pico H* and *Pico WH*, 'headers' isn't shortened to '*H*'.
 
-[[variants]]
+[[pico2-variants]]
 .Raspberry Pi Pico 2 variants
 [cols="2,1,1", options="header"]
 |===
@@ -228,7 +228,7 @@ Raspberry Pi *Pico 2* and *Pico 2 with headers* offer the following key features
   ** A choice of CPU architecture that can run tasks in parallel. For more information, see xref:../microcontrollers/microcontroller-chips.adoc#architecture_switching[Architecture switching]:
     *** Dual-core Arm Cortex-M33.
     *** Dual-core open source RISC-V Hazard.
-  ** Flexible clock running up to 133 MHz.
+  ** Flexible clock running up to 150 MHz.
   ** 520 kB of SRAM.
   ** USB 1.1 controller and PHY with device and host support.
   ** Low-power sleep and dormant modes.
@@ -255,17 +255,17 @@ Raspberry Pi *Pico 2* and *Pico 2 with headers* offer the following key features
 
 ==== Resources
 
-Raspberry Pi offers additional technical documentation relevant to Raspberry Pi Pico and Pico H:
+Raspberry Pi offers additional technical documentation relevant to Raspberry Pi Pico 2 and Pico 2 H:
 
-* https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf[RP2350 Datasheet: A microcontroller by Raspberry Pi]
-* https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf[Raspberry Pi Pico Datasheet: An RP2350-based microcontroller board]
-* https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf[Hardware design with RP2350: Using RP2350 microcontrollers to build boards and products]
-* https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf[Getting started with Raspberry Pi Pico-series microcontrollers: C/{cpp} development with Raspberry Pi Pico-series and other Raspberry Pi microcontroller-based boards]
+* https://pip.raspberrypi.com/documents/RP-008373-DS[RP2350 Datasheet: A microcontroller by Raspberry Pi]
+* https://pip.raspberrypi.com/documents/RP-008299-DS[Raspberry Pi Pico 2 Datasheet: An RP2350-based microcontroller board]
+* https://pip.raspberrypi.com/documents/RP-008280-DS[Hardware design with RP2350: Using RP2350 microcontrollers to build boards and products]
+* https://pip.raspberrypi.com/documents/RP-008276-DS[Getting started with Raspberry Pi Pico-series microcontrollers: C/{cpp} development with Raspberry Pi Pico-series and other Raspberry Pi microcontroller-based boards]
 
 Additionally, Raspberry Pi provides the following supporting hardware design resources:
 
 * https://pip.raspberrypi.com/documents/RP-008303-DS[STEP file]: a 3-dimensional CAD model of the board for enclosure and mechanical design.
-* http://fritizing.org[Fritzing] part: component for use in Fritzing, an electronics design tool for layouts and schematics: https://pip.raspberrypi.com/documents/RP-008300-DS[Fritzing part for Raspberry Pi Pico W].
+* http://fritzing.org[Fritzing] part: component for use in Fritzing, an electronics design tool for layouts and schematics: https://pip.raspberrypi.com/documents/RP-008300-DS[Fritzing part for Raspberry Pi Pico 2].
 
 IMPORTANT: Design files for Raspberry Pi Pico and Pico H are openly available with no limitations. Raspberry Pi grants permission to use, copy, modify, and distribute the following designs for any purpose, with or without fee. Designs are provided 'as-is' and the author disclaims all warranties with regard to the design, including all implied warranties of merchantability and fitness. In no event shall the author be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence, or other tortious action, arising out of or in connection with the use or performance of the design.
 
@@ -284,7 +284,7 @@ Raspberry Pi *Pico 2 W* and *Pico 2 W with headers* offer the same key features 
   ** A choice of CPU architectures that can run tasks in parallel. For more information, see xref:../microcontrollers/microcontroller-chips.adoc#architecture_switching[Architecture switching]:
     *** Dual-core Arm Cortex-M33.
     *** Dual-core open source RISC-V Hazard.
-  ** Flexible clock running up to 133 MHz.
+  ** Flexible clock running up to 150 MHz.
   ** 520 kB of SRAM.
   ** USB 1.1 controller and PHY with device and host support.
   ** Low-power sleep and dormant modes.
@@ -325,11 +325,11 @@ For more information about the wireless hardware and functionality of Raspberry 
 Raspberry Pi offers additional technical documentation relevant to Raspberry Pi Pico 2 W and Pico 2 W with headers:
 
 * https://pip.raspberrypi.com/documents/RP-008373-DS[RP2350 Datasheet: A microcontroller by Raspberry Pi]
-* https://pip.raspberrypi.com/documents/RP-008304-DS[Raspberry Pi Pico W Datasheet: An RP2350-based microcontroller board]
+* https://pip.raspberrypi.com/documents/RP-008304-DS[Raspberry Pi Pico 2 W Datasheet: An RP2350-based microcontroller board]
 * https://pip.raspberrypi.com/documents/RP-008280-DS[Hardware design with RP2350: Using RP2350 microcontrollers to build boards and products]
 * https://pip.raspberrypi.com/documents/RP-008257-DS[Connecting to the Internet with Raspberry Pi Pico W-series: Getting online with C/{cpp} or MicroPython on W-series devices]
 
-Additionally, Raspberry Pi provides a https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#documentation[schematic diagram] to support hardware design.
+Additionally, Raspberry Pi provides a https://datasheets.raspberrypi.com/picow/pico-2-w-schematic.pdf[schematic diagram] to support hardware design.
 
 IMPORTANT: Design files for Raspberry Pi Pico 2 and Pico 2 W with headers are openly available with no limitations. Raspberry Pi grants permission to use, copy, modify, and distribute the following designs for any purpose, with or without fee. Designs are provided 'as-is' and the author disclaims all warranties with regard to the design, including all implied warranties of merchantability and fitness. In no event shall the author be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence, or other tortious action, arising out of or in connection with the use or performance of the design.
 
@@ -340,18 +340,21 @@ Wireless Raspberry Pi Pico models (Raspberry Pi *Pico W*, *Pico WH*, *Pico 2 W*,
 
 === Wireless hardware and antenna
 
-Wireless Raspberry Pi Pico models use the *Infineon CYW43439* wireless chip, connected to the on-board microcontroller through an SPI interface operating at up to 33 MHz. Raspberry Pi *Pico W* and *Pico WH* also feature an on-board antenna licensed from *ABRACON* (formerly ProAnt).
+Wireless Raspberry Pi Pico models use the *Infineon CYW43439* wireless chip, connected to the on-board microcontroller through an SPI interface operating at up to 33 MHz. Wireless Raspberry Pi Pico models also feature an on-board antenna licensed from *ABRACON* (formerly ProAnt).
 
 Because this wireless subsystem shares some of the pins, some interface signals are multiplexed with other board functions.
 
 * The SPI clock line (`CLK`) is shared with the `VSYS` voltage monitor, and so the ADC can only read `VSYS` when no SPI transaction is in progress.
-* The Infineon CYW43439 `DIN/OUT` and `IRQ` signals share a pin, so you can only check for interrupted requests (IRQ) when no SPI transaction is in progress.
+* The Infineon CYW43439 `DIN/OUT` and `IRQ` signals share a pin, so you can only check for interrupt requests (IRQ) when no SPI transaction is in progress.
 
 For optimal wireless performance, keep the antenna space free. Placing metal near or under the antenna can significantly reduce signal gain and bandwidth; grounded metal placed along the sides of the antenna can improve the antenna's bandwidth.
 
 === Wireless software licensing
 
-The software libraries, `libcyw43` and `BTstack`, are free to use for non-commercial projects. However, Raspberry Pi has negotiated special commercial rights for Raspberry Pi Pico and microcontroller users. This means that users are granted a free license for commercial use for projects built with Raspberry Pi *Pico W*, *Pico WH*, or a combination of RP2040 and CYW43439.
+The software libraries, `libcyw43` and `BTstack`, are free to use for non-commercial projects. However, Raspberry Pi has negotiated special commercial rights for Raspberry Pi Pico and microcontroller users. This means that users are granted a free license for commercial use for projects built with:
+
+* Wireless Raspberry Pi Pico boards (Raspberry Pi *Pico W*, *Pico WH*, *Pico 2 W*, and *Pico 2 W with headers*).
+* A combination of *RP2040* and *CYW43439*, or *RP2350* and *CYW43439*.
 
 [[layouts]]
 == Board layouts
@@ -498,7 +501,7 @@ If you want to erase the external flash memory, you can copy a special https://d
 === Resources for software development
 Raspberry Pi offers additional technical documentation development with Raspberry Pi Pico:
 
-* https://pip-assets.raspberrypi.com/categories/609-microcontroller-boards/documents/RP-009085-KB-1-raspberry-pi-pico-c-sdk.pdf?disposition=inline[Raspberry Pi Pico C/{cpp} SDK: Libraries and tools for C/{cpp} development on Raspberry Pi microcontrollers]
-* https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf[Raspberry Pi Pico-series Python SDK: A MicroPython environment for Raspberry Pi microcontrollers]
+* https://pip.raspberrypi.com/documents/RP-009085-KB[Raspberry Pi Pico C/{cpp} SDK: Libraries and tools for C/{cpp} development on Raspberry Pi microcontrollers]
+* https://pip.raspberrypi.com/documents/RP-008355-DS[Raspberry Pi Pico-series Python SDK: A MicroPython environment for Raspberry Pi microcontrollers]
 
-The API-level Doxyden documentation for the Raspberry Pi Pico C/{cpp} SDK is also available as a microsite.
+For API-level Doxygen documentation for the Raspberry Pi Pico C/{cpp} SDK, see https://www.raspberrypi.com/documentation/pico-sdk/[Pico C SDK].
