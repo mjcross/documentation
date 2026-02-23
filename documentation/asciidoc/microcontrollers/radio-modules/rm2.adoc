@@ -40,14 +40,19 @@ image::images/mechanical-rm2.png[width="75%"]
 == Compliance
 RM2 is designed to comply with international radio regulations, offering pre-certified approval in key global markets. RM2 is fully tested and tuned by Raspberry Pi, meaning that its design doesn't require further RF tuning or module programming on your production line. You can access relevant product test reports, certifications, and integration test software through our https://pip.raspberrypi.com/[Product Information Portal (PIP)].
 
-RM2 comes with full modular approval in the following regions:
+RM2 is approved for use in the following regions:
 
 * European Union (EU)
 * United Kingdom (UK)
 * United States of America (USA)
 * Canada
+* India
+* Malaysia
 
-Modular approval means that you don't have to conduct full radio certification in these regions; you can integrate RM2 into your product with minimal additional testing.
+In the *EU*, *UK*, *USA*, and *Canada*, manufacturers of host devices (products that integrate RM2) can leverage RM2's existing certification to simplify and reduce additional approval requirements. This is called *full modular approval* and means that you don't have to conduct full radio certification in these regions; you can integrate RM2 into your product with minimal additional testing.
+
+In *India* and *Malaysia*, modular approval isn't granted. This means that RM2's certification applies only to the radio module itself; it doesn't extend to host devices that incorporate it. Any host device containing RM2 must obtain its own separate approval.
 
 If you need support with module integration or if you plan to use RM2 in regions beyond those listed above, contact the Global Market Access team at gma@raspberrypi.com.
+
 
