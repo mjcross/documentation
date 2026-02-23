@@ -163,7 +163,7 @@ curl::
 +
 [source,console]
 ----
-$ curl --header 'Authorization: Bearer rporg_accesstokenhere' --data-urlencode 'description=my-auth-key' --data-urlencode 'ttl_days=1' https://api.connect.raspberrypi.com/organisation/auth-keys
+$ curl --header 'Authorization: Bearer rporg_accesstokenhere' --data-urlencode 'description=my-auth-key' --data-urlencode 'ttl_days=1' --data-urlencode 'device_name=pi5-001' https://api.connect.raspberrypi.com/organisation/auth-keys
 ----
 
 ======
