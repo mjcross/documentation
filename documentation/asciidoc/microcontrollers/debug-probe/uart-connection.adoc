@@ -58,32 +58,33 @@ image::images/description.jpg[width="60%"]
 
 The unique serial number in this description means that on Windows your COM port numbering is "sticky" per device, and will allow you to write `udev` rules to associate a named device node with a particular Debug Probe.
 
-== Send stdio over SWD using RTT
+== RTT connections
 
-You can, if desired, avoid using a serial link and send your application's output directly over the SWD interface by using a mechanism called Segger Real-Time Transport (RTT), that is supported by both the C/C++ SDK and the Debug Probe.
+You can also, if desired, configure your application to send its output directly over the SWD interface without the need for a UART connection.
+This use a mechanism called Segger Real-Time Transport (RTT).
 
-NOTE: you will only be able to see the output over SWD from a *debug build* of your application.
+NOTE: you will only be able to send output over SWD from a *debug build* of your application.
 
-Sending stdio over RTT requires two steps: enabling the driver when building your application, and connecting to it with the Debug Probe.
+To do this requires two steps: enabling the RTT stdio driver in your application, and connecting to RTT with the Debug Probe.
 
-=== Enabling RTT in your build
+=== Enabling the RTT stdio driver
 
 The C/C++ SDK provides a stdio driver for RTT just like the ones for UART and USB (see https://www.raspberrypi.com/documentation/pico-sdk/runtime.html#group_pico_stdio_rtt[pico_stdio_rtt] in the API documentation).
 
-To use the driver you must enable it by including the following line in your `CmakeLists.txt` file (or some other means of linking with `pico_stdio_rtt`):
+To enable the driver in your build include the following line in your *CMakeLists.txt* file (or link with *pico_stdio_rtt* which does the same thing):
 
 [source,console]
 ----
 pico_enable_stdio_rtt(test_stdio_rtt 1)
 ----
 
-After that you can just call `stdio_init_all()` and `printf()` and so on as normal. So with the exception of that change you can just use the `hello_serial` example program as described above.
+Your application can then call `stdio_init_all()` and output to `printf()` will be sent to RTT. If you want output to go to the UART as well then you can enable that too.
 
 === Connecting to RTT from VSCode
 
-RTT is supported by `openocd` and the VSCode https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug[Cortex-Debug] extension, both of which should have been set up as part of https://github.com/raspberrypi/documentation/blob/master/documentation/asciidoc/microcontrollers/debug-probe/installing-tools.adoc#install-tools[installing the tools]. If preferred you can also control `openocd` manually via `gdb` as described in the following section.
+RTT is supported by `openocd` and the VSCode https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug[Cortex-Debug] extension, both of which should have been set up as part of https://github.com/raspberrypi/documentation/blob/master/documentation/asciidoc/microcontrollers/debug-probe/installing-tools.adoc#install-tools[installing the tools]. To enable it you have to add a section to your debug launch configuration.
 
-With Cortex-Debug, open *launch.json* in your project's `.vscode` folder and add the following section to the *"Pico Debug (Cortex-Debug)"* configuration:
+Add the following lines to the *launch.json* file in your project's *.vscode* folder, putting them in the configuration section for *"Pico Debug (Cortex-Debug)"*: 
 
 [source,console]
 ----
@@ -100,13 +101,15 @@ With Cortex-Debug, open *launch.json* in your project's `.vscode` folder and add
 }
 ----
 
-Now connect the debug probe, launch your application with *"Pico Debug (Cortex-Debug)"* and open the *TERMINAL* tab in the lower pane of the VSCode window. In the list of terminals at the right you should now see one called `RTT Ch:0 console`. Select this to see any output that your application sends to the `pico_stdio_rtt` driver.
+_see https://github.com/Marus/cortex-debug/blob/master/debug_attributes.md[cortex-debug launch attributes]_
 
-For a list of all the `cortex-debug` attributes that can be included in *launch.json* see the https://github.com/Marus/cortex-debug/blob/master/debug_attributes.md[documentation].
+
+If you now launch a debug session on an RTT-enabled application and open the *TERMINAL* tab you should now see a list on the right that includes `RTT Ch:0 console`.Select this to see the output that your application sends via the `pico_stdio_rtt` driver.
+
 
 === Connecting to RTT in a standalone debug session
 
-If you are using a standalone debug session as described in https://github.com/raspberrypi/documentation/blob/master/documentation/asciidoc/microcontrollers/debug-probe/swd-connection.adoc#standalone-debug-session[Starting a Debug Session] then you can connect to RTT as follows.
+If you are using a standalone debug session as described in https://github.com/raspberrypi/documentation/blob/master/documentation/asciidoc/microcontrollers/debug-probe/swd-connection.adoc#standalone-debug-session[Starting a Debug Session] you can connect to RTT as follows.
 
 Build and upload your RTT-enabled application, then connect the Debug Probe and start `openocd` and `gdb` separate terminals https://github.com/raspberrypi/documentation/blob/master/documentation/asciidoc/microcontrollers/debug-probe/swd-connection.adoc#standalone-debug-session[as described before].
 
@@ -118,15 +121,15 @@ At the `gdb` prompt enter the following commands:
 (gdb) monitor reset init
 (gdb) monitor rtt setup 0x20000000 2048 "SEGGER RTT"
 (gdb) monitor rtt start
-(gdb) monitor rtt server start 60000
+(gdb) monitor rtt server start 60000 0
 (gdb) continue
 ----
 
-Note that `gdb` commands prefixed with `monitor` are passed through to `openocd`, so for details of the commands used here see https://openocd.org/doc/html/General-Commands.html[section 15.6] of the OpenOCD Manual.
+Note that `gdb` commands prefixed with `monitor` are passed through to `openocd`. For details of the commands used here see https://openocd.org/doc/html/General-Commands.html[section 15.6] of the OpenOCD Manual.
 
-You should see messages as `rtt` searches for a control block on the target and then listens for connections to a local TCP socket on port 60000.
+You should see `openocd` searching for an RTT control block on the target and then creating a local TCP socket on port 60000.
 
-Finally open a third window and connect to the local socket with a tool like `nc` (netcat) or equivalent to see the output from the application:
+Finally open a third window and connect to the local socket with a tool like `nc` (netcat) or equivalent to see the RTT output from your application:
 
 [source,console]
 ----
