@@ -104,14 +104,14 @@ To enable RTT for a debug session add a section to its launch configuration. Ope
 _see https://github.com/Marus/cortex-debug/blob/master/debug_attributes.md[cortex-debug launch attributes]_
 
 
-If you now launch a debug session on an RTT-enabled application and open the *TERMINAL* tab you should now see a list on the right that includes `RTT Ch:0 console`.Select this to see the output that your application sends via the `pico_stdio_rtt` driver.
+If you now launch a debug session on an RTT-enabled application and open the *TERMINAL* tab you should see a list on the right that includes `RTT Ch:0 console`. Select this to see the output that your application sends to the `pico_stdio_rtt` driver.
 
 
 === Connecting to RTT in a standalone debug session
 
 If you are using a standalone debug session as described in https://github.com/raspberrypi/documentation/blob/master/documentation/asciidoc/microcontrollers/debug-probe/swd-connection.adoc#standalone-debug-session[Starting a Debug Session] you can connect to RTT as follows.
 
-Build and upload your RTT-enabled application, then connect the Debug Probe and start `openocd` and `gdb` separate terminals https://github.com/raspberrypi/documentation/blob/master/documentation/asciidoc/microcontrollers/debug-probe/swd-connection.adoc#standalone-debug-session[as described before].
+Build and upload your RTT-enabled application, then connect the Debug Probe and start `openocd` and `gdb` in separate terminals https://github.com/raspberrypi/documentation/blob/master/documentation/asciidoc/microcontrollers/debug-probe/swd-connection.adoc#standalone-debug-session[as described before].
 
 At the `gdb` prompt enter the following commands:
 
